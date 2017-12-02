@@ -1,0 +1,37 @@
+<section>
+    <h1 class="text-center">FAÇA UMA COMPARAÇÃO DE HASH'S</h1>
+    <form id="formCriptografia">        
+        <div class="form-row">           
+            <div class="form-group col-md-4">
+                <label for="cifrar">CIFRAR</label>
+                <textarea class="form-control" id="cifrar" name="cifrar" rows="10"></textarea>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="descifrar">DESCIFRAR</label>
+                <textarea class="form-control" id="descifrar" name="descifrar" rows="10"></textarea>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="resultado">RESULTADO</label>
+                <textarea class="form-control" id="resultado" name="resultado" rows="10"></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="tipo_criptografia">TIPO CRIPTOGRAFIA</label>
+                <select class="form-control" id="tipo_hash" name="tipo_criptografia" required>
+                    <option value="">ESCOLHA UM TIPO DE CRIPTOGRAFIA</option>
+                    <option value="1">CIFRA DE CÉSAR</option>
+                    <option value="2">AES256 COM SALT</option>
+                    <option value="3">RC4</option>
+                </select>
+            </div>
+        </div>
+        <input type="hidden" name="metodo" id="metodo">
+        <div class="form-row">
+            <div class="form-group col-md-6 text-center">
+                <button type="submit" class="btn btn-primary col-md-6" name="criptografar" id="criptografar" value="1"><i class="fa fa-hand-o-left" aria-hidden="true"></i> CRIPTOGRAFAR</button>
+            </div>
+            <div class="form-group col-md-6 text-center">
+                <button type="submit" class="btn btn-primary col-md-6" name="descriptografar" id="descriptografar" value="1">DESCRIPTOGRAFAR <i class="fa fa-hand-o-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </form>
+</section>
