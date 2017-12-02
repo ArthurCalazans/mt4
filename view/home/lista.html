@@ -1,0 +1,49 @@
+<section>
+    <h1 class="text-center">CONSULTE OS DISPOSITIVOS</h1>
+
+    <table class="table table-hover">
+        <thead class="thead-dark text-center">  
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">HOSTNAME</th>
+                <th scope="col">IP</th>
+                <th scope="col">TIPO</th>
+                <th scope="col">FABRICANTE</th>
+                <th scope="col">MODELO</th>
+                <th scope="col">STATUS</th>
+                <th scope="col">DATA CADASTRO</th>
+                <th scope="col">AÇÃO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php 
+            include $root.'controller/model.php';
+            while ($linha = $resultado->fetch_object()) {
+            ?>
+            <tr>
+                <td class="text-center"><?php echo $linha->id_dispositivo; ?></td>
+                <td><?php echo $linha->hostname; ?></td>
+                <td><?php echo $linha->ip; ?></td>
+                <td><?php echo (($linha->tipo == 1) ? 'Servidor' : (($linha->tipo == 2) ? 'Roteador' : 'Switch')); ?></td>
+                <td><?php echo $linha->fabricante; ?></td>
+                <td><?php echo $linha->modelo; ?></td>
+                <td class="text-center"><?php echo $linha->status == 1 ? 'Ativo' : 'Inativo'; ?></td>
+                <td class="text-center"><?php echo date('d/m/Y', strtotime($linha->dta_cadastro)); ?></td>
+                <td class="text-center">
+                    <?php if($linha->status == 0){ ?>
+                    <button type="button" class="btn btn-info" value="<?php echo $linha->id_dispositivo; ?>">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <?php } else { ?>
+                    <button type="button" class="btn btn-danger" value="<?php echo $linha->id_dispositivo; ?>">
+                    <i class="fa fa-ban" aria-hidden="true"></i>
+                    <?php }  ?>
+                    </button>
+                    <button type="button" class="btn btn-warning" value="<?php echo $linha->id_dispositivo; ?>">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </button>
+                </td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</section>

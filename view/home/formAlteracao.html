@@ -1,0 +1,40 @@
+<section>
+    <h1 class="text-center" id="tituloAlteracao">CADASTRE UM NOVO DISPOSITIVO</h1>
+    <form id="formDispositivoAlteracao">
+        <input type="hidden" id="id_dispositivo_alteracao" name="id_dispositivo_alteracao">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="hostname_alteracao">Hostname</label>
+                <input type="text" class="form-control" id="hostname_alteracao" name="hostname_alteracao" placeholder="Digite o HOSTNAME" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="ip_alteracao">IP</label>
+                <input type="text" class="form-control" id="ip_alteracao" name="ip_alteracao" placeholder="Digite o IP" required pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="tipo_alteracao">TIPO</label>
+                <select class="form-control" id="tipo_alteracao" name="tipo_alteracao" required>
+                    <option value="">Escolha um TIPO</option>
+                    <option value="1">Servidor</option>
+                    <option value="2">Roteador</option>
+                    <option value="3">Switch</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="fabricante_alteracao">FABRICANTE</label>
+                <input type="text" class="form-control" id="fabricante_alteracao" name="fabricante_alteracao" placeholder="Digite o FABRICANTE" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="modelo_alteracao">MODELO</label>
+                <input type="text" class="form-control" id="modelo_alteracao" name="modelo_alteracao" placeholder="Digite o MODELO" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12 text-center">
+                <button type="submit" class="btn btn-primary col-md-6" id="alterar"><i class="fa fa-share-square" aria-hidden="true"></i> ALTERAR</button>
+            </div>
+        </div>
+    </form>
+</section>

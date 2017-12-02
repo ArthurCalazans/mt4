@@ -1,0 +1,32 @@
+<section>
+    <h1 class="text-center">FAÇA UMA COMPARAÇÃO DE HASH'S</h1>
+    <form id="formHash">        
+        <div class="form-row">           
+            <div class="form-group col-md-6">
+                <label for="hash1">HASH DE REFERÊNCIA</label>
+                <input type="text" class="form-control" id="hash1" name="hash1" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="hash2">HASH A SER COMPARADO</label>
+                <input type="text" class="form-control" id="hash2" name="hash2" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="tipo_hash">TIPO HASH</label>
+                <select class="form-control" id="tipo_hash" name="tipo_hash" required>
+                    <option value="">ESCOLHA UM TIPO DE HASH</option>
+                    <option value="1">SHA512</option>
+                    <option value="2">HMAC</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6" id="div_chave" style="display:none">
+                <label for="chave">CHAVE</label>
+                <input type="text" class="form-control" id="chave" name="chave" required disabled>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12 text-center">
+                <button type="submit" class="btn btn-primary col-md-6" id="cadastrar"><i class="fa fa-arrows-alt" aria-hidden="true"></i> COMPARAR HASH</button>
+            </div>
+        </div>
+    </form>
+</section>

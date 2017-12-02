@@ -1,0 +1,39 @@
+<section>
+    <h1 class="text-center">CADASTRE UM NOVO DISPOSITIVO</h1>
+    <form id="formDispositivo">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="hostname">Hostname</label>
+                <input type="text" class="form-control" id="hostname" name="hostname" placeholder="Digite o HOSTNAME" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="ip">IP</label>
+                <input type="text" class="form-control" id="ip" name="ip" placeholder="Digite o IP" required pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="tipo">TIPO</label>
+                <select class="form-control" id="tipo" name="tipo" required>
+                    <option value="">Escolha um TIPO</option>
+                    <option value="1">Servidor</option>
+                    <option value="2">Roteador</option>
+                    <option value="3">Switch</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="fabricante">FABRICANTE</label>
+                <input type="text" class="form-control" id="fabricante" name="fabricante" placeholder="Digite o FABRICANTE" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="modelo">MODELO</label>
+                <input type="text" class="form-control" id="modelo" name="modelo" placeholder="Digite o MODELO" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12 text-center">
+                <button type="submit" class="btn btn-primary col-md-6" id="cadastrar"><i class="fa fa-share-square-o" aria-hidden="true"></i> CADASTRAR</button>
+            </div>
+        </div>
+    </form>
+</section>

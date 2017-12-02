@@ -1,0 +1,34 @@
+<section>
+    <h1 class="text-center">FAÇA UMA CONEXÃO SSH COM ALGUM DISPOSITIVO</h1>
+    <form id="loginSSH">
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="dispositivos_cadastrados">DISPOSITIVOS CADASTRADOS</label>
+                <select class="form-control" id="dispositivos_cadastrados" name="dispositivos_cadastrados" required>
+                    <option value="">Escolha um DISPOSITIVO CADASTRADO</option>
+                    <?php 
+                    include $root.'controller/model.php';
+                    while ($linha = $resultado->fetch_object()) {
+                    ?>
+                    <option value="<?php echo $linha->id_dispositivo ?>">Hostname: <?php echo $linha->hostname ?> - IP: <?php echo $linha->ip ?></option>
+                    <?php } ?>
+                </select>
+            </div>            
+        </div>
+        <div class="form-row">           
+            <div class="form-group col-md-6">
+                <label for="usuario">USUÁRIO</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="senha">SENHA</label>
+                <input type="password" class="form-control" id="senha" name="senha" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12 text-center">
+                <button type="submit" class="btn btn-primary col-md-6" id="cadastrar"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</button>
+            </div>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,78 @@
+<div class="container">
+    <div id="accordion" role="tablist">
+        <div class="card">
+            <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Listagem de Dispositivo
+                    </a>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <?php include $root.'view/home/lista.html'; ?>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Cadastro de Dispositivo
+                    </a>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <?php include $root.'view/home/formCadastro.html'; ?>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="alteracao" style="display:none">
+            <div class="card-header" role="tab" id="headingThree">
+                <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        Alteração de Dispositivo
+                    </a>
+                </h5>
+            </div>
+
+            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    <?php include $root.'view/home/formAlteracao.html'; ?>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" role="tab" id="headingFour">
+                <h5 class="mb-0">
+                    <a  class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Conexção SSH
+                    </a>
+                </h5>
+            </div>
+
+            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                    <?php include $root.'view/home/ssh.html'; ?>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" role="tab" id="headingFive">
+                <h5 class="mb-0">
+                    <a  class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Comparação de Hashes
+                    </a>
+                </h5>
+            </div>
+
+            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                    <?php include $root.'view/home/hashes.html'; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
